@@ -3,8 +3,8 @@ function safeCall(f) {
         f();
         return true;
     } catch (e) {
+        return false;
     }
-    return false;
 }
 
 Function.prototype.safeCall = function() {
@@ -12,6 +12,7 @@ Function.prototype.safeCall = function() {
         this();
         return true;
     } catch (e) {
+        console.error(e)
+        return null;
     }
-    return false;
 };
