@@ -13,7 +13,6 @@ Function.prototype.safeCall = function() {
         this();
         return true;
     } catch(e) {
-        console.error(e);
         return null;
     }
 };
